@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+  Dashboard Factory: 3DEXPERIENCE dashboard widget (UWA widget page).
+  Add this page's HTTPS URL to a dashboard with "Run Your App" (or have the
+  platform administrator register it as an additional app). The platform
+  provides the `widget` object and the DS modules; see docs/DEPLOYMENT.md.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Factory</title>
+    <meta name="author" content="BWC Labs" />
+    <meta name="description" content="Attribute-driven dashboards on 3DEXPERIENCE federated search." />
+    <meta name="version" content="1.1.0" />
+    <meta name="apiVersion" content="1.3" />
+    <meta name="debugMode" content="false" />
+    <meta name="strictMode" content="false" />
+    <meta name="autoRefresh" content="0" />
+    <widget:preferences>
+      <!-- Widget state (views, set-up choices, columns) as one JSON value, scoped by tenant, user and context. -->
+      <widget:preference type="hidden" name="df_prefs" defaultValue="{}" />
+      <!-- The Credentials list (ctx_credentials) is added at start-up with widget.addPreference, once the user's contexts are known. -->
+    </widget:preferences>
+    <script defer src="./assets/dashboard-factory.js"></script>
+    <link rel="stylesheet" href="./assets/dashboard-factory.css">
+  </head>
+  <body>
+    <div id="dashboard-factory"></div>
+  </body>
+</html>
