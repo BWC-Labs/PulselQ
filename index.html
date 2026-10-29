@@ -20,6 +20,16 @@
     <widget:preferences>
       <!-- Widget state (views, set-up choices, columns) as one JSON value, scoped by tenant, user and context. -->
       <widget:preference type="hidden" name="df_prefs" defaultValue="{}" />
+      <!-- The view opened on start-up. Saved dashboards are added to this list at run time (widget.addPreference). -->
+      <widget:preference type="list" name="df_default_view" label="Default view" defaultValue="activity">
+        <widget:option label="My Activity" value="activity" />
+        <widget:option label="Home" value="home" />
+        <widget:option label="Project Schedule" value="schedule" />
+        <widget:option label="Open Change Actions" value="preset:changes" />
+        <widget:option label="Engineering Release Status" value="preset:release" />
+        <widget:option label="My Open Issues" value="preset:myissues" />
+        <widget:option label="Risks to Watch" value="preset:risks" />
+      </widget:preference>
       <!-- The Credentials list (ctx_credentials) is added at start-up with widget.addPreference, once the user's contexts are known. -->
     </widget:preferences>
     <script defer src="./assets/dashboard-factory.js"></script>
